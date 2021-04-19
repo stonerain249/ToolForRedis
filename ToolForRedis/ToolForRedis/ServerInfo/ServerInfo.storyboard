@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17701"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Window Controller-->
+        <scene sceneID="Zrj-0j-knJ">
+            <objects>
+                <windowController storyboardIdentifier="serverInfoStoryboardId" id="tMU-aJ-DXk" sceneMemberID="viewController">
+                    <window key="window" title="Redis Server Info" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="6ze-TY-Qsf" customClass="NSPanel">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" utility="YES" HUD="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="245" y="301" width="480" height="300"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                        <view key="contentView" id="NVS-Ov-4Lb">
+                            <rect key="frame" x="0.0" y="0.0" width="480" height="300"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </view>
+                        <connections>
+                            <outlet property="delegate" destination="tMU-aJ-DXk" id="KAE-ZO-alT"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <segue destination="fdA-w1-8pr" kind="relationship" relationship="window.shadowedContentViewController" id="2Gu-Bq-KPr"/>
+                    </connections>
+                </windowController>
+                <customObject id="143-83-5u4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20" y="963"/>
+        </scene>
+        <!--Server InfoVC-->
+        <scene sceneID="mUs-ts-IKc">
+            <objects>
+                <viewController id="fdA-w1-8pr" customClass="ServerInfoVC" customModule="RedClient" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="IHF-Rv-VH0">
+                        <rect key="frame" x="0.0" y="0.0" width="475" height="230"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="iTs-im-hJT" userLabel="vBg">
+                                <rect key="frame" x="10" y="10" width="455" height="210"/>
+                                <subviews>
+                                    <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kv8-5N-oa9">
+                                        <rect key="frame" x="0.0" y="0.0" width="455" height="210"/>
+                                        <clipView key="contentView" id="gS3-n9-kQn">
+                                            <rect key="frame" x="1" y="1" width="453" height="208"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <subviews>
+                                                <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnReordering="NO" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="ACb-8p-cdc" viewBased="YES" id="tRD-0W-I0f" userLabel="tvServerInfo">
+                                                    <rect key="frame" x="0.0" y="0.0" width="453" height="183"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <size key="intercellSpacing" width="3" height="2"/>
+                                                    <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
+                                                    <tableColumns>
+                                                        <tableColumn identifier="tvServerinfo.col1" width="116" minWidth="40" maxWidth="1000" id="wJA-eo-NDP">
+                                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Key">
+                                                                <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                                <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                                            </tableHeaderCell>
+                                                            <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" title="Text Cell" id="FlA-ru-p84">
+                                                                <font key="font" metaFont="system"/>
+                                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                            </textFieldCell>
+                                                            <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                                            <prototypeCellViews>
+                                                                <tableCellView identifier="tvServerinfo.col1Cell" id="PPS-6d-J40">
+                                                                    <rect key="frame" x="1" y="1" width="121" height="17"/>
+                                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                    <subviews>
+                                                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="xme-hx-bFF">
+                                                                            <rect key="frame" x="0.0" y="1" width="121" height="15"/>
+                                                                            <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" alignment="left" title="Table View Cell" id="e1n-gT-iZq">
+                                                                                <font key="font" metaFont="cellTitle"/>
+                                                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                                            </textFieldCell>
+                                                                        </textField>
+                                                                    </subviews>
+                                                                    <constraints>
+                                                                        <constraint firstItem="xme-hx-bFF" firstAttribute="centerX" secondItem="PPS-6d-J40" secondAttribute="centerX" id="FQr-40-0rl"/>
+                                                                        <constraint firstItem="xme-hx-bFF" firstAttribute="centerY" secondItem="PPS-6d-J40" secondAttribute="centerY" id="gs8-sL-6RB"/>
+                                                                        <constraint firstItem="xme-hx-bFF" firstAttribute="leading" secondItem="PPS-6d-J40" secondAttribute="leading" constant="2" id="nCp-c5-dRm"/>
+                                                                    </constraints>
+                                                                    <connections>
+                                                                        <outlet property="textField" destination="xme-hx-bFF" id="6VG-dU-T0F"/>
+                                                                    </connections>
+                                                                </tableCellView>
+                                                            </prototypeCellViews>
+                                                        </tableColumn>
+                                                        <tableColumn identifier="tvServerinfo.col2" width="322" minWidth="40" maxWidth="1000" id="Xqd-6I-O2a">
+                                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Value">
+                                                                <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                                <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                                            </tableHeaderCell>
+                                                            <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" title="Text Cell" id="WC8-3q-KAh">
+                                                                <font key="font" metaFont="system"/>
+                                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                            </textFieldCell>
+                                                            <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                                            <prototypeCellViews>
+                                                                <tableCellView identifier="tvServerinfo.col2Cell" id="5Kr-TQ-GS3">
+                                                                    <rect key="frame" x="125" y="1" width="326" height="17"/>
+                                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                    <subviews>
+                                                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="JyS-7n-VhT">
+                                                                            <rect key="frame" x="0.0" y="1" width="326" height="15"/>
+                                                                            <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" alignment="left" title="Table View Cell" id="wAS-pK-0DB">
+                                                                                <font key="font" metaFont="cellTitle"/>
+                                                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                                            </textFieldCell>
+                                                                        </textField>
+                                                                    </subviews>
+                                                                    <constraints>
+                                                                        <constraint firstItem="JyS-7n-VhT" firstAttribute="leading" secondItem="5Kr-TQ-GS3" secondAttribute="leading" constant="2" id="61n-SW-s1u"/>
+                                                                        <constraint firstItem="JyS-7n-VhT" firstAttribute="centerX" secondItem="5Kr-TQ-GS3" secondAttribute="centerX" id="PEQ-BN-aIP"/>
+                                                                        <constraint firstItem="JyS-7n-VhT" firstAttribute="centerY" secondItem="5Kr-TQ-GS3" secondAttribute="centerY" id="Yed-eu-a4d"/>
+                                                                    </constraints>
+                                                                    <connections>
+                                                                        <outlet property="textField" destination="JyS-7n-VhT" id="6lY-Ud-p8S"/>
+                                                                    </connections>
+                                                                </tableCellView>
+                                                            </prototypeCellViews>
+                                                        </tableColumn>
+                                                    </tableColumns>
+                                                </tableView>
+                                            </subviews>
+                                        </clipView>
+                                        <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="mDp-bD-xla">
+                                            <rect key="frame" x="1" y="118" width="238" height="16"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </scroller>
+                                        <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="m1h-Pg-SgP">
+                                            <rect key="frame" x="224" y="17" width="15" height="102"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </scroller>
+                                        <tableHeaderView key="headerView" wantsLayer="YES" id="ACb-8p-cdc">
+                                            <rect key="frame" x="0.0" y="0.0" width="453" height="25"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableHeaderView>
+                                    </scrollView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Kv8-5N-oa9" firstAttribute="leading" secondItem="iTs-im-hJT" secondAttribute="leading" id="Ivl-if-UM8"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="400" id="WVz-3O-K6D"/>
+                                    <constraint firstAttribute="trailing" secondItem="Kv8-5N-oa9" secondAttribute="trailing" id="ewh-8C-HTx"/>
+                                    <constraint firstItem="Kv8-5N-oa9" firstAttribute="top" secondItem="iTs-im-hJT" secondAttribute="top" id="fPY-CY-VRg"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="210" id="mkV-Eg-zsB"/>
+                                    <constraint firstAttribute="bottom" secondItem="Kv8-5N-oa9" secondAttribute="bottom" id="tj8-QP-FiS"/>
+                                </constraints>
+                            </customView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="iTs-im-hJT" firstAttribute="leading" secondItem="IHF-Rv-VH0" secondAttribute="leading" constant="10" id="93w-WF-Ccz"/>
+                            <constraint firstAttribute="trailing" secondItem="iTs-im-hJT" secondAttribute="trailing" constant="10" id="RXc-JN-Hqh"/>
+                            <constraint firstItem="iTs-im-hJT" firstAttribute="top" secondItem="IHF-Rv-VH0" secondAttribute="top" constant="10" id="WsX-g0-hsM"/>
+                            <constraint firstAttribute="bottom" secondItem="iTs-im-hJT" secondAttribute="bottom" constant="10" id="z8e-bQ-vhW"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tvServerInfo" destination="tRD-0W-I0f" id="48D-i9-xsx"/>
+                    </connections>
+                </viewController>
+                <customObject id="x08-fJ-tgC" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="620" y="957"/>
+        </scene>
+    </scenes>
+</document>

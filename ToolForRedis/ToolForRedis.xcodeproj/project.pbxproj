@@ -1,0 +1,766 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BE335C91262D656800C695A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE335C90262D656800C695A9 /* AppDelegate.swift */; };
+		BE335C93262D656800C695A9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE335C92262D656800C695A9 /* ViewController.swift */; };
+		BE335C95262D656B00C695A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE335C94262D656B00C695A9 /* Assets.xcassets */; };
+		BE335C98262D656B00C695A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE335C96262D656B00C695A9 /* Main.storyboard */; };
+		BE335CA4262D656C00C695A9 /* ToolForRedisTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE335CA3262D656C00C695A9 /* ToolForRedisTests.swift */; };
+		BE335CAF262D656C00C695A9 /* ToolForRedisUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE335CAE262D656C00C695A9 /* ToolForRedisUITests.swift */; };
+		BE335CC1262D66B000C695A9 /* NIOTransportServices in Frameworks */ = {isa = PBXBuildFile; productRef = BE335CC0262D66B000C695A9 /* NIOTransportServices */; };
+		BE335CE9262D67D300C695A9 /* CommandCliV.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE335CCC262D67D300C695A9 /* CommandCliV.swift */; };
+		BE335CEA262D67D300C695A9 /* CommandCliV.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE335CCD262D67D300C695A9 /* CommandCliV.xib */; };
+		BE335CEB262D67D300C695A9 /* LibRedisProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE335CCF262D67D300C695A9 /* LibRedisProtocol.swift */; };
+		BE335CEC262D67D300C695A9 /* LibCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE335CD0262D67D300C695A9 /* LibCommon.swift */; };
+		BE335CED262D67D300C695A9 /* LibHTTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE335CD1262D67D300C695A9 /* LibHTTP.swift */; };
+		BE335CEE262D67D300C695A9 /* NSView+Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE335CD2262D67D300C695A9 /* NSView+Common.swift */; };
+		BE335CEF262D67D300C695A9 /* LibRedisStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE335CD3262D67D300C695A9 /* LibRedisStream.swift */; };
+		BE335CF0262D67D300C695A9 /* LibRedisSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE335CD4262D67D300C695A9 /* LibRedisSocket.swift */; };
+		BE335CF1262D67D300C695A9 /* LibRedis.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE335CD5262D67D300C695A9 /* LibRedis.swift */; };
+		BE335CF2262D67D300C695A9 /* LibRedisCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE335CD6262D67D300C695A9 /* LibRedisCommand.swift */; };
+		BE335CF3262D67D300C695A9 /* NSButton+Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE335CD7262D67D300C695A9 /* NSButton+Common.swift */; };
+		BE335CF4262D67D300C695A9 /* PubSubUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE335CD9262D67D300C695A9 /* PubSubUI.swift */; };
+		BE335CF5262D67D300C695A9 /* PubSub.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE335CDA262D67D300C695A9 /* PubSub.storyboard */; };
+		BE335CF6262D67D300C695A9 /* PubSubVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE335CDB262D67D300C695A9 /* PubSubVC.swift */; };
+		BE335CF7262D67D300C695A9 /* AlertAccessoryView_NewChannel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE335CDC262D67D300C695A9 /* AlertAccessoryView_NewChannel.swift */; };
+		BE335CF8262D67D300C695A9 /* ServerInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE335CDE262D67D300C695A9 /* ServerInfo.storyboard */; };
+		BE335CF9262D67D300C695A9 /* ServerInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE335CDF262D67D300C695A9 /* ServerInfoVC.swift */; };
+		BE335CFA262D67D300C695A9 /* ServerManagement.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE335CE1262D67D300C695A9 /* ServerManagement.storyboard */; };
+		BE335CFB262D67D300C695A9 /* ServerManagementVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE335CE2262D67D300C695A9 /* ServerManagementVC.swift */; };
+		BE335CFC262D67D300C695A9 /* MainVC+Tableview.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE335CE4262D67D300C695A9 /* MainVC+Tableview.swift */; };
+		BE335CFD262D67D300C695A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE335CE5262D67D300C695A9 /* Main.storyboard */; };
+		BE335CFE262D67D300C695A9 /* MainVC+KeyspaceNoti.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE335CE6262D67D300C695A9 /* MainVC+KeyspaceNoti.swift */; };
+		BE335CFF262D67D300C695A9 /* AlertAccessoryV_AddKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE335CE7262D67D300C695A9 /* AlertAccessoryV_AddKey.swift */; };
+		BE335D00262D67D300C695A9 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE335CE8262D67D300C695A9 /* MainVC.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BE335CA0262D656C00C695A9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BE335C85262D656800C695A9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BE335C8C262D656800C695A9;
+			remoteInfo = ToolForRedis;
+		};
+		BE335CAB262D656C00C695A9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BE335C85262D656800C695A9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BE335C8C262D656800C695A9;
+			remoteInfo = ToolForRedis;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BE335C8D262D656800C695A9 /* ToolForRedis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToolForRedis.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE335C90262D656800C695A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BE335C92262D656800C695A9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BE335C94262D656B00C695A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BE335C97262D656B00C695A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BE335C99262D656B00C695A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE335C9A262D656B00C695A9 /* ToolForRedis.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ToolForRedis.entitlements; sourceTree = "<group>"; };
+		BE335C9F262D656C00C695A9 /* ToolForRedisTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToolForRedisTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE335CA3262D656C00C695A9 /* ToolForRedisTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolForRedisTests.swift; sourceTree = "<group>"; };
+		BE335CA5262D656C00C695A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE335CAA262D656C00C695A9 /* ToolForRedisUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToolForRedisUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE335CAE262D656C00C695A9 /* ToolForRedisUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolForRedisUITests.swift; sourceTree = "<group>"; };
+		BE335CB0262D656C00C695A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE335CCC262D67D300C695A9 /* CommandCliV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommandCliV.swift; sourceTree = "<group>"; };
+		BE335CCD262D67D300C695A9 /* CommandCliV.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommandCliV.xib; sourceTree = "<group>"; };
+		BE335CCF262D67D300C695A9 /* LibRedisProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibRedisProtocol.swift; sourceTree = "<group>"; };
+		BE335CD0262D67D300C695A9 /* LibCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibCommon.swift; sourceTree = "<group>"; };
+		BE335CD1262D67D300C695A9 /* LibHTTP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibHTTP.swift; sourceTree = "<group>"; };
+		BE335CD2262D67D300C695A9 /* NSView+Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSView+Common.swift"; sourceTree = "<group>"; };
+		BE335CD3262D67D300C695A9 /* LibRedisStream.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibRedisStream.swift; sourceTree = "<group>"; };
+		BE335CD4262D67D300C695A9 /* LibRedisSocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibRedisSocket.swift; sourceTree = "<group>"; };
+		BE335CD5262D67D300C695A9 /* LibRedis.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibRedis.swift; sourceTree = "<group>"; };
+		BE335CD6262D67D300C695A9 /* LibRedisCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibRedisCommand.swift; sourceTree = "<group>"; };
+		BE335CD7262D67D300C695A9 /* NSButton+Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSButton+Common.swift"; sourceTree = "<group>"; };
+		BE335CD9262D67D300C695A9 /* PubSubUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PubSubUI.swift; sourceTree = "<group>"; };
+		BE335CDA262D67D300C695A9 /* PubSub.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PubSub.storyboard; sourceTree = "<group>"; };
+		BE335CDB262D67D300C695A9 /* PubSubVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PubSubVC.swift; sourceTree = "<group>"; };
+		BE335CDC262D67D300C695A9 /* AlertAccessoryView_NewChannel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertAccessoryView_NewChannel.swift; sourceTree = "<group>"; };
+		BE335CDE262D67D300C695A9 /* ServerInfo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ServerInfo.storyboard; sourceTree = "<group>"; };
+		BE335CDF262D67D300C695A9 /* ServerInfoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerInfoVC.swift; sourceTree = "<group>"; };
+		BE335CE1262D67D300C695A9 /* ServerManagement.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ServerManagement.storyboard; sourceTree = "<group>"; };
+		BE335CE2262D67D300C695A9 /* ServerManagementVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerManagementVC.swift; sourceTree = "<group>"; };
+		BE335CE4262D67D300C695A9 /* MainVC+Tableview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MainVC+Tableview.swift"; sourceTree = "<group>"; };
+		BE335CE5262D67D300C695A9 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		BE335CE6262D67D300C695A9 /* MainVC+KeyspaceNoti.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MainVC+KeyspaceNoti.swift"; sourceTree = "<group>"; };
+		BE335CE7262D67D300C695A9 /* AlertAccessoryV_AddKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertAccessoryV_AddKey.swift; sourceTree = "<group>"; };
+		BE335CE8262D67D300C695A9 /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		BE335D04262D681C00C695A9 /* test.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = test.playground; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BE335C8A262D656800C695A9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE335CC1262D66B000C695A9 /* NIOTransportServices in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE335C9C262D656C00C695A9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE335CA7262D656C00C695A9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BE335C84262D656800C695A9 = {
+			isa = PBXGroup;
+			children = (
+				BE335C8F262D656800C695A9 /* ToolForRedis */,
+				BE335CA2262D656C00C695A9 /* ToolForRedisTests */,
+				BE335CAD262D656C00C695A9 /* ToolForRedisUITests */,
+				BE335C8E262D656800C695A9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BE335C8E262D656800C695A9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BE335C8D262D656800C695A9 /* ToolForRedis.app */,
+				BE335C9F262D656C00C695A9 /* ToolForRedisTests.xctest */,
+				BE335CAA262D656C00C695A9 /* ToolForRedisUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BE335C8F262D656800C695A9 /* ToolForRedis */ = {
+			isa = PBXGroup;
+			children = (
+				BE335C90262D656800C695A9 /* AppDelegate.swift */,
+				BE335C92262D656800C695A9 /* ViewController.swift */,
+				BE335C94262D656B00C695A9 /* Assets.xcassets */,
+				BE335C96262D656B00C695A9 /* Main.storyboard */,
+				BE335C99262D656B00C695A9 /* Info.plist */,
+				BE335C9A262D656B00C695A9 /* ToolForRedis.entitlements */,
+				BE335D04262D681C00C695A9 /* test.playground */,
+				BE335CCB262D67D300C695A9 /* CommandCli */,
+				BE335CCE262D67D300C695A9 /* Library */,
+				BE335CE3262D67D300C695A9 /* Main */,
+				BE335CD8262D67D300C695A9 /* PubSub */,
+				BE335CDD262D67D300C695A9 /* ServerInfo */,
+				BE335CE0262D67D300C695A9 /* ServerManagement */,
+			);
+			path = ToolForRedis;
+			sourceTree = "<group>";
+		};
+		BE335CA2262D656C00C695A9 /* ToolForRedisTests */ = {
+			isa = PBXGroup;
+			children = (
+				BE335CA3262D656C00C695A9 /* ToolForRedisTests.swift */,
+				BE335CA5262D656C00C695A9 /* Info.plist */,
+			);
+			path = ToolForRedisTests;
+			sourceTree = "<group>";
+		};
+		BE335CAD262D656C00C695A9 /* ToolForRedisUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BE335CAE262D656C00C695A9 /* ToolForRedisUITests.swift */,
+				BE335CB0262D656C00C695A9 /* Info.plist */,
+			);
+			path = ToolForRedisUITests;
+			sourceTree = "<group>";
+		};
+		BE335CCB262D67D300C695A9 /* CommandCli */ = {
+			isa = PBXGroup;
+			children = (
+				BE335CCC262D67D300C695A9 /* CommandCliV.swift */,
+				BE335CCD262D67D300C695A9 /* CommandCliV.xib */,
+			);
+			path = CommandCli;
+			sourceTree = "<group>";
+		};
+		BE335CCE262D67D300C695A9 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				BE335CCF262D67D300C695A9 /* LibRedisProtocol.swift */,
+				BE335CD0262D67D300C695A9 /* LibCommon.swift */,
+				BE335CD1262D67D300C695A9 /* LibHTTP.swift */,
+				BE335CD2262D67D300C695A9 /* NSView+Common.swift */,
+				BE335CD3262D67D300C695A9 /* LibRedisStream.swift */,
+				BE335CD4262D67D300C695A9 /* LibRedisSocket.swift */,
+				BE335CD5262D67D300C695A9 /* LibRedis.swift */,
+				BE335CD6262D67D300C695A9 /* LibRedisCommand.swift */,
+				BE335CD7262D67D300C695A9 /* NSButton+Common.swift */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		BE335CD8262D67D300C695A9 /* PubSub */ = {
+			isa = PBXGroup;
+			children = (
+				BE335CD9262D67D300C695A9 /* PubSubUI.swift */,
+				BE335CDA262D67D300C695A9 /* PubSub.storyboard */,
+				BE335CDB262D67D300C695A9 /* PubSubVC.swift */,
+				BE335CDC262D67D300C695A9 /* AlertAccessoryView_NewChannel.swift */,
+			);
+			path = PubSub;
+			sourceTree = "<group>";
+		};
+		BE335CDD262D67D300C695A9 /* ServerInfo */ = {
+			isa = PBXGroup;
+			children = (
+				BE335CDE262D67D300C695A9 /* ServerInfo.storyboard */,
+				BE335CDF262D67D300C695A9 /* ServerInfoVC.swift */,
+			);
+			path = ServerInfo;
+			sourceTree = "<group>";
+		};
+		BE335CE0262D67D300C695A9 /* ServerManagement */ = {
+			isa = PBXGroup;
+			children = (
+				BE335CE1262D67D300C695A9 /* ServerManagement.storyboard */,
+				BE335CE2262D67D300C695A9 /* ServerManagementVC.swift */,
+			);
+			path = ServerManagement;
+			sourceTree = "<group>";
+		};
+		BE335CE3262D67D300C695A9 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				BE335CE4262D67D300C695A9 /* MainVC+Tableview.swift */,
+				BE335CE5262D67D300C695A9 /* Main.storyboard */,
+				BE335CE6262D67D300C695A9 /* MainVC+KeyspaceNoti.swift */,
+				BE335CE7262D67D300C695A9 /* AlertAccessoryV_AddKey.swift */,
+				BE335CE8262D67D300C695A9 /* MainVC.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BE335C8C262D656800C695A9 /* ToolForRedis */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE335CB3262D656C00C695A9 /* Build configuration list for PBXNativeTarget "ToolForRedis" */;
+			buildPhases = (
+				BE335C89262D656800C695A9 /* Sources */,
+				BE335C8A262D656800C695A9 /* Frameworks */,
+				BE335C8B262D656800C695A9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ToolForRedis;
+			packageProductDependencies = (
+				BE335CC0262D66B000C695A9 /* NIOTransportServices */,
+			);
+			productName = ToolForRedis;
+			productReference = BE335C8D262D656800C695A9 /* ToolForRedis.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BE335C9E262D656C00C695A9 /* ToolForRedisTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE335CB6262D656C00C695A9 /* Build configuration list for PBXNativeTarget "ToolForRedisTests" */;
+			buildPhases = (
+				BE335C9B262D656C00C695A9 /* Sources */,
+				BE335C9C262D656C00C695A9 /* Frameworks */,
+				BE335C9D262D656C00C695A9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BE335CA1262D656C00C695A9 /* PBXTargetDependency */,
+			);
+			name = ToolForRedisTests;
+			productName = ToolForRedisTests;
+			productReference = BE335C9F262D656C00C695A9 /* ToolForRedisTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BE335CA9262D656C00C695A9 /* ToolForRedisUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE335CB9262D656C00C695A9 /* Build configuration list for PBXNativeTarget "ToolForRedisUITests" */;
+			buildPhases = (
+				BE335CA6262D656C00C695A9 /* Sources */,
+				BE335CA7262D656C00C695A9 /* Frameworks */,
+				BE335CA8262D656C00C695A9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BE335CAC262D656C00C695A9 /* PBXTargetDependency */,
+			);
+			name = ToolForRedisUITests;
+			productName = ToolForRedisUITests;
+			productReference = BE335CAA262D656C00C695A9 /* ToolForRedisUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BE335C85262D656800C695A9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					BE335C8C262D656800C695A9 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					BE335C9E262D656C00C695A9 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = BE335C8C262D656800C695A9;
+					};
+					BE335CA9262D656C00C695A9 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = BE335C8C262D656800C695A9;
+					};
+				};
+			};
+			buildConfigurationList = BE335C88262D656800C695A9 /* Build configuration list for PBXProject "ToolForRedis" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BE335C84262D656800C695A9;
+			packageReferences = (
+				BE335CBF262D66B000C695A9 /* XCRemoteSwiftPackageReference "swift-nio-transport-services" */,
+			);
+			productRefGroup = BE335C8E262D656800C695A9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BE335C8C262D656800C695A9 /* ToolForRedis */,
+				BE335C9E262D656C00C695A9 /* ToolForRedisTests */,
+				BE335CA9262D656C00C695A9 /* ToolForRedisUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BE335C8B262D656800C695A9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE335CFD262D67D300C695A9 /* Main.storyboard in Resources */,
+				BE335CF8262D67D300C695A9 /* ServerInfo.storyboard in Resources */,
+				BE335C95262D656B00C695A9 /* Assets.xcassets in Resources */,
+				BE335CFA262D67D300C695A9 /* ServerManagement.storyboard in Resources */,
+				BE335CF5262D67D300C695A9 /* PubSub.storyboard in Resources */,
+				BE335C98262D656B00C695A9 /* Main.storyboard in Resources */,
+				BE335CEA262D67D300C695A9 /* CommandCliV.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE335C9D262D656C00C695A9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE335CA8262D656C00C695A9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BE335C89262D656800C695A9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE335C93262D656800C695A9 /* ViewController.swift in Sources */,
+				BE335CEF262D67D300C695A9 /* LibRedisStream.swift in Sources */,
+				BE335CF0262D67D300C695A9 /* LibRedisSocket.swift in Sources */,
+				BE335CF6262D67D300C695A9 /* PubSubVC.swift in Sources */,
+				BE335CED262D67D300C695A9 /* LibHTTP.swift in Sources */,
+				BE335CEB262D67D300C695A9 /* LibRedisProtocol.swift in Sources */,
+				BE335CF3262D67D300C695A9 /* NSButton+Common.swift in Sources */,
+				BE335CEC262D67D300C695A9 /* LibCommon.swift in Sources */,
+				BE335CF4262D67D300C695A9 /* PubSubUI.swift in Sources */,
+				BE335CFB262D67D300C695A9 /* ServerManagementVC.swift in Sources */,
+				BE335CF9262D67D300C695A9 /* ServerInfoVC.swift in Sources */,
+				BE335CFE262D67D300C695A9 /* MainVC+KeyspaceNoti.swift in Sources */,
+				BE335CF7262D67D300C695A9 /* AlertAccessoryView_NewChannel.swift in Sources */,
+				BE335D00262D67D300C695A9 /* MainVC.swift in Sources */,
+				BE335CF2262D67D300C695A9 /* LibRedisCommand.swift in Sources */,
+				BE335CFF262D67D300C695A9 /* AlertAccessoryV_AddKey.swift in Sources */,
+				BE335CEE262D67D300C695A9 /* NSView+Common.swift in Sources */,
+				BE335CE9262D67D300C695A9 /* CommandCliV.swift in Sources */,
+				BE335C91262D656800C695A9 /* AppDelegate.swift in Sources */,
+				BE335CF1262D67D300C695A9 /* LibRedis.swift in Sources */,
+				BE335CFC262D67D300C695A9 /* MainVC+Tableview.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE335C9B262D656C00C695A9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE335CA4262D656C00C695A9 /* ToolForRedisTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE335CA6262D656C00C695A9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE335CAF262D656C00C695A9 /* ToolForRedisUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BE335CA1262D656C00C695A9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BE335C8C262D656800C695A9 /* ToolForRedis */;
+			targetProxy = BE335CA0262D656C00C695A9 /* PBXContainerItemProxy */;
+		};
+		BE335CAC262D656C00C695A9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BE335C8C262D656800C695A9 /* ToolForRedis */;
+			targetProxy = BE335CAB262D656C00C695A9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BE335C96262D656B00C695A9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BE335C97262D656B00C695A9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BE335CB1262D656C00C695A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BE335CB2262D656C00C695A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		BE335CB4262D656C00C695A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ToolForRedis/ToolForRedis.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 0.1;
+				DEVELOPMENT_TEAM = 3AHR7F44A3;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = ToolForRedis/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MARKETING_VERSION = 0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gamil.stonerain249.ToolForRedis;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		BE335CB5262D656C00C695A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ToolForRedis/ToolForRedis.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 0.1;
+				DEVELOPMENT_TEAM = 3AHR7F44A3;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = ToolForRedis/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MARKETING_VERSION = 0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gamil.stonerain249.ToolForRedis;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		BE335CB7262D656C00C695A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 3AHR7F44A3;
+				INFOPLIST_FILE = ToolForRedisTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gamil.stonerain249.ToolForRedisTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ToolForRedis.app/Contents/MacOS/ToolForRedis";
+			};
+			name = Debug;
+		};
+		BE335CB8262D656C00C695A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 3AHR7F44A3;
+				INFOPLIST_FILE = ToolForRedisTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gamil.stonerain249.ToolForRedisTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ToolForRedis.app/Contents/MacOS/ToolForRedis";
+			};
+			name = Release;
+		};
+		BE335CBA262D656C00C695A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 3AHR7F44A3;
+				INFOPLIST_FILE = ToolForRedisUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gamil.stonerain249.ToolForRedisUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = ToolForRedis;
+			};
+			name = Debug;
+		};
+		BE335CBB262D656C00C695A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 3AHR7F44A3;
+				INFOPLIST_FILE = ToolForRedisUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gamil.stonerain249.ToolForRedisUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = ToolForRedis;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BE335C88262D656800C695A9 /* Build configuration list for PBXProject "ToolForRedis" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE335CB1262D656C00C695A9 /* Debug */,
+				BE335CB2262D656C00C695A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BE335CB3262D656C00C695A9 /* Build configuration list for PBXNativeTarget "ToolForRedis" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE335CB4262D656C00C695A9 /* Debug */,
+				BE335CB5262D656C00C695A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BE335CB6262D656C00C695A9 /* Build configuration list for PBXNativeTarget "ToolForRedisTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE335CB7262D656C00C695A9 /* Debug */,
+				BE335CB8262D656C00C695A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BE335CB9262D656C00C695A9 /* Build configuration list for PBXNativeTarget "ToolForRedisUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE335CBA262D656C00C695A9 /* Debug */,
+				BE335CBB262D656C00C695A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BE335CBF262D66B000C695A9 /* XCRemoteSwiftPackageReference "swift-nio-transport-services" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-nio-transport-services.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BE335CC0262D66B000C695A9 /* NIOTransportServices */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BE335CBF262D66B000C695A9 /* XCRemoteSwiftPackageReference "swift-nio-transport-services" */;
+			productName = NIOTransportServices;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = BE335C85262D656800C695A9 /* Project object */;
+}
