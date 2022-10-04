@@ -194,15 +194,15 @@
 		BE335CCE262D67D300C695A9 /* Library */ = {
 			isa = PBXGroup;
 			children = (
-				BE335CCF262D67D300C695A9 /* LibRedisProtocol.swift */,
 				BE335CD0262D67D300C695A9 /* LibCommon.swift */,
 				BE335CD1262D67D300C695A9 /* LibHTTP.swift */,
-				BE335CD2262D67D300C695A9 /* NSView+Common.swift */,
-				BE335CD3262D67D300C695A9 /* LibRedisStream.swift */,
-				BE335CD4262D67D300C695A9 /* LibRedisSocket.swift */,
 				BE335CD5262D67D300C695A9 /* LibRedis.swift */,
 				BE335CD6262D67D300C695A9 /* LibRedisCommand.swift */,
+				BE335CCF262D67D300C695A9 /* LibRedisProtocol.swift */,
+				BE335CD4262D67D300C695A9 /* LibRedisSocket.swift */,
+				BE335CD3262D67D300C695A9 /* LibRedisStream.swift */,
 				BE335CD7262D67D300C695A9 /* NSButton+Common.swift */,
+				BE335CD2262D67D300C695A9 /* NSView+Common.swift */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -239,11 +239,11 @@
 		BE335CE3262D67D300C695A9 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				BE335CE4262D67D300C695A9 /* MainVC+Tableview.swift */,
-				BE335CE5262D67D300C695A9 /* Main.storyboard */,
-				BE335CE6262D67D300C695A9 /* MainVC+KeyspaceNoti.swift */,
 				BE335CE7262D67D300C695A9 /* AlertAccessoryV_AddKey.swift */,
+				BE335CE5262D67D300C695A9 /* Main.storyboard */,
 				BE335CE8262D67D300C695A9 /* MainVC.swift */,
+				BE335CE6262D67D300C695A9 /* MainVC+KeyspaceNoti.swift */,
+				BE335CE4262D67D300C695A9 /* MainVC+Tableview.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";

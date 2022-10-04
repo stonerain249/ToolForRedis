@@ -33,13 +33,11 @@ enum LibRedisCommand {
     case lrem(keyInfo:KeyInfo, itemValue:String, continueOnError:Bool, closureResultLrem:CLOSURE_RESULT_LREM)
 
     // set datatype commands
-    //case smembers(keyInfo:KeyInfo, continueOnError:Bool, closureResultSmembers:CLOSURE_RESULT_SMEMBERS)
     case sscan(keyInfo:KeyInfo, cursorIndex:Int, continueOnError:Bool, closureResultSscan:CLOSURE_RESULT_SSCAN?)
     case sadd(keyInfo:KeyInfo, value:String, continueOnError:Bool, closureResultSadd:CLOSURE_RESULT_SADD)
     case srem(keyInfo:KeyInfo, value:String, continueOnError:Bool, closureResultSrem:CLOSURE_RESULT_SREM)
     
     // hash datatype commands
-    //case hgetall(keyInfo:KeyInfo, continueOnError:Bool, closureResultHgetall:CLOSURE_RESULT_HGETALL)
     case hscan(keyInfo:KeyInfo, cursorIndex:Int, continueOnError:Bool, closureResultHscan:CLOSURE_RESULT_HSCAN?)
     case hset(keyInfo:KeyInfo, hash:String, value:String, continueOnError:Bool, closureResultHset:CLOSURE_RESULT_HSET)
     case hdel(keyInfo:KeyInfo, hash:String, continueOnError:Bool, closureResultHdel:CLOSURE_RESULT_HDEL)
@@ -206,11 +204,6 @@ enum LibRedisCommand {
                 guard let arg0 = args[0] else {break}
                 closureResultLrem(arg0 as! String)
 
-            //case .smembers(_, let continueOnError, let closureResultSmembers):
-            //    isContinueOnError = continueOnError
-            //    guard let arg0 = args[0] else {break}
-            //    closureResultSmembers(arg0 as! [String:Any])
-
             case .sscan(_, _, let continueOnError, _):
                 isContinueOnError = continueOnError
                 guard let closure = LibRedisCommand.closureResultSscan else {return}
@@ -227,11 +220,6 @@ enum LibRedisCommand {
                 guard let arg0 = args[0] else {break}
                 closureResultSrem(arg0 as! String)
                 
-            //case .hgetall(_, let continueOnError, let closureResultHgetall):
-            //    isContinueOnError = continueOnError
-            //    guard let arg0 = args[0] else {break}
-            //    closureResultHgetall(arg0 as! [String:Any])
-
             case .hscan(_, _, let continueOnError, _):
                 isContinueOnError = continueOnError
                 guard let closure = LibRedisCommand.closureResultHscan else {return}
@@ -405,11 +393,6 @@ enum LibRedisCommand {
             keyInfo_ = keyInfo
             temps.append(contentsOf: ["lrem", KEYNAME_DATA, "1", itemValue])
 
-        // smembers {keyname}
-        //case .smembers(let keyInfo, _, _):
-        //    keyInfo_ = keyInfo
-        //    temps.append(contentsOf: ["smembers", KEYNAME_DATA])
-
         case .sscan(let keyInfo, let cursorIndex, _, let closureResultSscan):
             keyInfo_ = keyInfo
             LibRedisCommand.sscanKeyInfo = keyInfo
@@ -426,11 +409,6 @@ enum LibRedisCommand {
             keyInfo_ = keyInfo
             temps.append(contentsOf: ["srem", KEYNAME_DATA, value])
             
-        // hgetall {keyname}
-        //case .hgetall(let keyInfo, _, _):
-        //    keyInfo_ = keyInfo
-        //    temps.append(contentsOf: ["hgetall", KEYNAME_DATA])
-
         case .hscan(let keyInfo, let cursorIndex, _, let closureResultHscan):
             keyInfo_ = keyInfo
             LibRedisCommand.hscanKeyInfo = keyInfo
@@ -507,17 +485,6 @@ enum LibRedisCommand {
         //print("--->"+String(decoding: commandData, as: UTF8.self))
         LibRedisCommand.displayCommandArray.append(commandString)
         
-//        if libRedisStream.outputStream == nil {return}
-//        doProgressIndicator(show: true)
-//        libRedisStream.libRedisCommand = self
-//        commandData.withUnsafeBytes { (unsafeBytes) in
-//            let bytes:UnsafePointer<UInt8> = unsafeBytes.bindMemory(to: UInt8.self).baseAddress!
-//            libRedisStream.outputStream.write(bytes, maxLength: unsafeBytes.count)
-//        }
-        
-        //libRedisStream.libTcp.send(sendData: commandData)
-        //libRedisSocket.send(sendData:commandData, libRedisCommand:self)
-        
         return commandData
     }
 
@@ -525,52 +492,6 @@ enum LibRedisCommand {
     static func doGetKeySpaceNotiChannel(dbNo:Int) -> String {
         return "__keyspace@\(dbNo)__"
     }
-    
-    //static func doGetKeyEventNotiChannel(dbNo:Int) -> String {
-    //    return "__keyevent@\(dbNo)__"
-    //}
-    
-    
-//    struct CommandCli {
-//        var command:[String]
-//        var mdFileUrl:String
-//    }
-//    static var allListxxx:[CommandCli] = [
-//        CommandCli(command: ["AUTH", "[username]", "password"], mdFileUrl: "auth.md"),
-//        CommandCli(command: ["SELECT", "index"], mdFileUrl: "select.md"),
-//        CommandCli(command: ["SCAN", "cursor", "[MATCH pattern]", "[COUNT count]", "[TYPE type]"], mdFileUrl: "select.md"),
-//        CommandCli(command: ["TYPE", "key"], mdFileUrl: "select.md"),
-//        CommandCli(command: ["TTL", "key"], mdFileUrl: "select.md"),
-//        CommandCli(command: ["EXPIRE", "key", "seconds"], mdFileUrl: "select.md"),
-//        CommandCli(command: ["PERSIST", "key"], mdFileUrl: "select.md"),
-//        CommandCli(command: ["INFO", "[section]"], mdFileUrl: "select.md"),
-//        CommandCli(command: ["CONFIG GET", "parameter"], mdFileUrl: "select.md"),
-//        CommandCli(command: ["CONFIG SET", "parameter", "value"], mdFileUrl: "select.md"),
-//        CommandCli(command: ["RENAMENX", "key", "newkey"], mdFileUrl: "select.md"),
-//        CommandCli(command: ["DEL", "key", "[key ...]"], mdFileUrl: "select.md"),
-//        CommandCli(command: ["GET", "key"], mdFileUrl: "select.md"),
-//        CommandCli(command: ["SET", "key", "value", "[EX seconds|PX milliseconds|EXAT timestamp|PXAT milliseconds-timestamp|KEEPTTL]", "[NX|XX]", "[GET]"], mdFileUrl: "select.md"),
-//        CommandCli(command: ["LRANGE", "key", "start", "stop"], mdFileUrl: "select.md"),
-//        CommandCli(command: ["LSET", "key", "index", "element"], mdFileUrl: "select.md"),
-//        CommandCli(command: ["RPUSH", "key", "element", "[element ...]"], mdFileUrl: "select.md"),
-//        CommandCli(command: ["LREM", "key", "count", "element"], mdFileUrl: "select.md"),
-//        CommandCli(command: ["SSCAN", "key", "cursor", "[MATCH pattern]", "[COUNT count]"], mdFileUrl: "select.md"),
-//        CommandCli(command: ["SADD", "key", "member", "[member ...]"], mdFileUrl: "select.md"),
-//        CommandCli(command: ["SREM", "key", "member", "[member ...]"], mdFileUrl: "select.md"),
-//        CommandCli(command: ["HSCAN", "key", "cursor", "[MATCH pattern]", "[COUNT count]"], mdFileUrl: "select.md"),
-//        CommandCli(command: ["HSET", "key", "field", "value", "[field value ...]"], mdFileUrl: "select.md"),
-//        CommandCli(command: ["HDEL", "key", "field", "[field ...]"], mdFileUrl: "select.md"),
-//        CommandCli(command: ["ZRANGE", "key", "min", "max", "[BYSCORE|BYLEX]", "[REV]", "[LIMIT offset count]", "[WITHSCORES]"], mdFileUrl: "select.md"),
-//        CommandCli(command: ["ZADD", "key", "[NX|XX]", "[GT|LT]", "[CH]", "[INCR]", "score", "member", "[score member ...]"], mdFileUrl: "select.md"),
-//        CommandCli(command: ["ZREM", "key", "member", "[member ...]"], mdFileUrl: "select.md"),
-//        CommandCli(command: ["PUBSUB CHANNELS", "[pattern]"], mdFileUrl: "select.md"),
-//        CommandCli(command: ["SUBSCRIBE", "channel", "[channel ...]"], mdFileUrl: "select.md"),
-//        CommandCli(command: ["PSUBSCRIBE", "pattern", "[pattern ...]"], mdFileUrl: "select.md"),
-//        CommandCli(command: ["UNSUBSCRIBE", "[channel [channel ...]]"], mdFileUrl: "select.md"),
-//        CommandCli(command: ["PUNSUBSCRIBE", "[pattern [pattern ...]]"], mdFileUrl: "select.md"),
-//        CommandCli(command: ["PUBLISH", "channel", "message"], mdFileUrl: "select.md")
-//    ]
-    
     
     
     // 각 배열에서 맨 마지막은, redis.io 명령어 설명 사이트 주소임.
